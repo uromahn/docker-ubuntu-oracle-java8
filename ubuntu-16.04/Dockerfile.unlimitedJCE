@@ -17,9 +17,6 @@ RUN apt-get -y update && apt-get install -y wget \
 RUN rm /usr/lib/jvm/java-8-oracle/jre/lib/security/US_export_policy.jar /usr/lib/jvm/java-8-oracle/jre/lib/security/local_policy.jar
 COPY UnlimitedJCEPolicyJDK8/*.jar /usr/lib/jvm/java-8-oracle/jre/lib/security/
  
-# Define working directory.
-WORKDIR /data
-
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
