@@ -1,24 +1,34 @@
-# Ubuntu 14.04 (Trusty) Docker Container with Oracle's Java 8 SDK
+# Ubuntu Docker Container with Oracle's Java 8 SDK
 
-This Dockerfile will create a basic container with Ubuntu 14.04 (Trusty) and installs Oracle's Java 8 SDK into it.
+This Dockerfile will create a basic container with Ubuntu and installs Oracle's Java 8 SDK into it.
 
 To install Oracle's Java 8 SDK, it will use the webupd8team Debian ppa.
+
+This project contains two sub-folder - one for Ubuntu 14.04 Trusty and another for the latest Ubuntu 16.04 Xenial.
 
 ## How to use?
 
 Clone this repository and simply type:
 
+For an image based on Ubuntu 14.04 Trusty:
 ```
-$ docker build -t ubuntu-oracle-java8 .
+$ cd ubuntu14.04
+$ docker build -t ubuntu-oracle-java8:14.04 .
 ```
 
-If you prefer a different tag for your image, then simply replace `ubuntu-oracle-java8` with your preferred one.
+For an image based on Ubuntu 16.04 Trusty:
+```
+$ cd ubuntu16.04
+$ docker build -t ubuntu-oracle-java8:16.04 .
+```
+
+If you prefer a different tag for your image, then simply replace `ubuntu-oracle-java8:<tag>` with your preferred one.
 
 ## Prerequisites
 
 You will have to have Docker installed on your local machine.
 
-This Dockerfile should work with all Docker versions but I highly recommend to use the latest version for it.
+This Dockerfile may only work with Docker versoin 10.1 or higher!
 
 ## Image with Unlimited Strength JCE
 
